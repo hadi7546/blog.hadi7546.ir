@@ -1,1 +1,0 @@
-/home/hadi/Me/Blog/Posts/1-about-q-mark.md
