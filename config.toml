@@ -1,0 +1,136 @@
+baseURL = ""
+defaultContentLanguage = "fa-ir"
+enableRobotsTXT = true
+languageCode = "fa-ir"
+languageDirection = "rtl"
+paginate = 10
+theme = "m10c"
+title = "Hadi7546's Blog"
+
+[menu]
+[[menu.main]]
+identifier = "tags"
+name = "برچسب ها"
+url = "/tags/"
+weight = 1
+[menu.main.params]
+icon = "tag"
+
+[[menu.main]]
+identifier = "RSS"
+name = "فید RSS"
+url = "/index.xml"
+weight = 2
+[menu.main.params]
+icon = "rss"
+
+[params]
+Description = "بلاگِ هادی."
+EnableTwitterEmbed = false
+author = "Hadi Azarnasab"
+avatar = "avatar.png"
+# favicon = "ttt.jpg"
+
+graphcommentId = "hadi7546"
+menu_item_separator = " | "
+
+[markup.highlight]
+# style = 'monokai'
+#style = 'rrt'
+#style = 'xcode-dark'
+#style = 'fruity'
+style = 'dracula'
+
+[params.style]
+darkColor = "#3b3d42"
+darkestColor = "#1b1c1d"
+lightColor = "#f5e3e0"
+lightestColor = "#f5f5f5"
+primaryColor = "#ffffff"
+
+[params.csp]
+childsrc = ["'self'"]
+connectsrc = [
+  "'self'",
+  "disqus.com",
+  "disquscdn.com",
+  "*.disqus.com",
+  "*.disquscdn.com",
+  "*.graphcomment.com",
+  "graphcomment.com",
+]
+fontsrc = [
+  "'self'",
+  "https://use.fontawesome.com",
+  "https://fonts.gstatic.com",
+  "https://public.slidesharecdn.com",
+  "disqus.com",
+  "disquscdn.com",
+  "*.disqus.com",
+  "*.disquscdn.com",
+]
+formaction = [
+  "'self'",
+  "https://syndication.twitter.com/",
+  "https://platform.twitter.com",
+  "disqus.com",
+  "disquscdn.com",
+  "*.disqus.com",
+  "*.disquscdn.com",
+]
+framesrc = [
+  "'self'",
+  "www.youtube.com",
+  "www.youtube-nocookie.com",
+  "https://platform.twitter.com",
+  "https://syndication.twitter.com",
+  "https://jsfiddle.net",
+  "fiddle.jshell.net",
+  "*.jsfiddle.net",
+  "disqus.com",
+  "disquscdn.com",
+  "*.disqus.com",
+  "*.disquscdn.com",
+  "*.graphcomment.com",
+  "graphcomment.com",
+]
+imgsrc = [
+  "'self'",
+  "https://www.google-analytics.com",
+  "https://platform.twitter.com",
+  "*.twimg.com",
+  "https://syndication.twitter.com",
+  "data:",
+  "https://files.kuula.io",
+  "disqus.com",
+  "disquscdn.com",
+  "*.disqus.com",
+  "*.disquscdn.com",
+]
+objectsrc = ["'none'"]
+scriptsrc = [
+  "'self'",
+  "'unsafe-inline'",
+  "https://platform.twitter.com",
+  "https://cdn.syndication.twimg.com",
+  "*.amazon-adsystem.com",
+  "https://www.google-analytics.com",
+  "disqus.com",
+  "disquscdn.com",
+  "*.disqus.com",
+  "*.disquscdn.com",
+  "*.graphcomment.com",
+]
+stylesrc = [
+  "'self'",
+  "'unsafe-inline'",
+  "https://use.fontawesome.com",
+  "https://fonts.googleapis.com",
+  "https://www.google.com",
+  "https://platform.twitter.com",
+  "*.twimg.com",
+  "disqus.com",
+  "disquscdn.com",
+  "*.disqus.com",
+  "*.disquscdn.com",
+]

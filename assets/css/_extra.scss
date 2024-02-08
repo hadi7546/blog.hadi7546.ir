@@ -1,0 +1,168 @@
+/* arabic */
+@font-face {
+    font-family: 'Vazirmatn';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/vazirmatn/v13/Dxx78j6PP2D_kU2muijPEe1n2vVbfJRklWgzCRWT7lDF.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Vazirmatn';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/vazirmatn/v13/Dxx78j6PP2D_kU2muijPEe1n2vVbfJRklWgzCR6T7lDF.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Vazirmatn';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/vazirmatn/v13/Dxx78j6PP2D_kU2muijPEe1n2vVbfJRklWgzCRCT7g.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+body {
+    direction: rtl;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.highlight,
+.pagination,
+pre {
+    direction: ltr;
+    background: black
+}
+
+.post-content>pre,
+.post-content .highlight>pre,
+.post-content .highlight>div {
+    text-align: left;
+    font-size: 1.2em;
+
+}
+
+.post-content {
+    font-size: 1.2em;
+    text-align: start !important;
+    unicode-bidi: plaintext !important;
+    direction: $text-direction;
+
+}
+
+.twitter-tweet.twitter-tweet-rendered {
+    margin: auto;
+}
+
+.app-header-social a:not(:last-child) {
+    margin-right: unset;
+    margin-left: .4em;
+}
+
+@media(min-width:940px) {
+    .app-header {
+        left: unset;
+        right: 0
+    }
+
+    .app-container {
+        margin-left: unset;
+        margin-right: 20rem
+    }
+}
+
+.post-meta>div>.icon {
+    margin-right: unset;
+    margin-left: .4em
+}
+
+.post-meta>div {
+    display: block;
+}
+
+.posts-list-item h2 {
+    font-size: inherit;
+    margin: 0;
+    font-weight: inherit;
+}
+
+.posts-list-item-description>.icon {
+    margin: 0 .4em 0 .4em;
+}
+
+.posts-list-item-description {
+    font-family: sans-serif
+}
+
+.tags-list-item>.icon {
+    margin: 0 .4em 0 .4em;
+}
+
+
+@media(min-width:450px) {
+    .tags-list-item:nth-child(even) {
+        margin-left: unset;
+        margin-right: 1em
+    }
+}
+
+.post-content blockquote {
+    border-left: unset;
+    border-right: .4em solid rgba(87, 204, 138, .8);
+}
+
+
+
+.code-block {
+    display: block;
+    direction: ltr;
+}
+
+.code-block,
+.highlight,
+.highlight pre {
+    position: relative;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.copy-code-button {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    font-size: .8em;
+    font-weight: 600;
+    line-height: .9em;
+    width: auto;
+    color: #232326;
+    background-color: #7f7f7f;
+    border: 1.25px solid #232326;
+    border-top-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    white-space: nowrap;
+    padding: 3px;
+    margin: 0 0 0 1px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.copy-code-button:hover,
+.copy-code-button:focus,
+.copy-code-button:active,
+.copy-code-button:active:hover {
+    color: #222225;
+    background-color: #b3b3b3;
+    opacity: 0.8;
+}

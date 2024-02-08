@@ -1,0 +1,33 @@
+<div id="graphcomment"></div>
+<script>
+    /* - - - CONFIGURATION VARIABLES - - - */
+
+    var __semio__params = {
+        graphcommentId: "{{ $.Site.Params.graphcommentId | default " - " | safeHTML }}",
+
+        behaviour: {
+            uid: "{{ .File.UniqueID }}",
+        },
+
+        // configure your variables here
+
+    }
+
+    /* - - - DON'T EDIT BELOW THIS LINE - - - */
+
+    function __semio__onload() {
+        __semio__gc_graphlogin(__semio__params)
+    }
+
+
+    (function() {
+        var gc = document.createElement('script');
+        gc.type = 'text/javascript';
+        gc.async = true;
+        gc.onload = __semio__onload;
+        gc.defer = true;
+        gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + (new Date().toISOString().slice(0, 10));
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+    })();
+
+</script>
