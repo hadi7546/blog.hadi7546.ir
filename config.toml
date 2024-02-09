@@ -35,6 +35,30 @@ image = "cutted-hadi.jpg"
 graphcommentId = "hadi7546"
 menu_item_separator = " | "
 
+[[params.social]]
+icon = "globe"
+name = "website"
+url = "https://hadi7546.ir"
+[[params.social]]
+icon = "twitter"
+name = "twitter"
+url = "https://hadi7546.ir/social/twitter"
+
+[[params.social]]
+icon = "github"
+name = "github"
+url = "https://hadi7546.ir/social/github"
+
+[[params.social]]
+icon = "telegram"
+name = "telegram"
+url = "https://hadi7546.ir/social/telegram"
+
+[[params.social]]
+icon = "email"
+name = "email"
+url = "mailto:hi@hadi7546.ir"
+
 [markup.highlight]
 # style = 'monokai'
 #style = 'rrt'
