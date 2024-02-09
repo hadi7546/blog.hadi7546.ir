@@ -29,6 +29,7 @@ Description = "بلاگِ هادی."
 EnableTwitterEmbed = false
 author = "Hadi Azarnasab"
 avatar = "avatar.png"
+image = "cutted-hadi.jpg"
 # favicon = "ttt.jpg"
 
 graphcommentId = "hadi7546"
