@@ -25,7 +25,7 @@
   <meta name="twitter:description" content=".در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective">
 
     <meta property="og:url" content="http://localhost:1313/why-i-love-rust-cohle/">
-  <meta property="og:site_name" content="Hadi7546&#39;s Blog">
+  <meta property="og:site_name" content="hadi&#39;s blog">
   <meta property="og:title" content="چرا Rust Cohle رو دوست دارم؟">
   <meta property="og:description" content=".در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective">
   <meta property="og:locale" content="fa_ir">
@@ -42,7 +42,7 @@
 <body>
     <header class="app-header">
         <a href="http://localhost:1313/"><img class="app-header-avatar" src="/avatar.png" alt="Hadi Azarnasab" /></a>
-        <span class="app-header-title">Hadi7546&#39;s Blog</span>
+        <span class="app-header-title">hadi&#39;s blog</span>
         <nav class="app-header-menu">
             <a class="app-header-menu-item" href="/tags/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
   <title>برچسب ها</title>
@@ -55,7 +55,7 @@
   <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
 </svg> فید RSS</a>
         </nav>
-        <p>بلاگِ هادی.</p>
+        <p>بلاگ هادی</p>
         <div class="app-header-social">
             
             <a href="https://hadi7546.ir" target="_blank" rel="noreferrer noopener me">
@@ -98,6 +98,34 @@
     <main class="app-container">
         
 <style>
+    #post-content a.en-link {
+        direction: ltr;
+        display: inline-block;
+    }
+
+    .post-content a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        direction: ltr;
+    }
+
+    .post-content a:hover {
+        color: #004499;
+        text-decoration: underline;
+    }
+
+    .post-content a.highlight {
+        background-color: #fff3cd;
+        padding: 2px 4px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+    }
+
+    .post-content a.highlight:hover {
+        background-color: #ffe69c;
+    }
+
     .rtl {
         direction: rtl;
         text-align: right;
@@ -212,8 +240,8 @@
 <p><em>If the only thing keeping a person decent is the expectation of divine reward, then, brother, that person is a piece of shit - and I&rsquo;d like to get as many of them out in the open as possible.</em></p>
 </blockquote>
 <p>در نهایت راست کارآگاهی ماهر، همکاری محترم، آدمی سرشار از تفکرات زیبا و درنهایت دوستی بود که هرچند مجبور به کارهایی ناشایست شد ولی باز هم قابل احترام بود. راست حداقل برای من شخصیه که دوست دارم بتونم شبیه‌اش صحبت کنم حداقل. امسال ۱۰ ساله که از انتشار اولین اپیزود فصل اول این سریال می‌گذره. دوست داشتید چندتا لینک می‌ذارم که می‌تونید دیدگاه‌های بقیه رو هم درموردش ‌بخونید.</p>
-<p><a href="https://beiner.substack.com/p/true-detective-and-the-challenge">True Detective and the Challenge of Nihilism</a>
-<a href="https://www.vulture.com/2014/02/philosopher-assesses-true-detective-characters-rust-cohle-marty-hart.html">Ask a Philosopher: What’s Up With True Detective’s Rust Cohle?</a></p>
+<p><a href="https://beiner.substack.com/p/true-detective-and-the-challenge">True Detective and the Challenge of Nihilism</a></p>
+<p><a href="https://www.vulture.com/2014/02/philosopher-assesses-true-detective-characters-rust-cohle-marty-hart.html">Ask a Philosopher: What’s Up With True Detective’s Rust Cohle?</a></p>
 
     </div>
     <div class="post-footer">
@@ -275,6 +303,35 @@
         setDirection(content);
     });
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const content = document.getElementById('post-content');
+
+        function isEnglish(text) {
+            return /^[A-Za-z0-9\s\W]*$/.test(text);
+        }
+
+        function processNode(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const span = document.createElement('span');
+                span.textContent = node.textContent;
+                node.parentNode.replaceChild(span, node);
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                if (node.tagName === 'A') {
+                    if (isEnglish(node.textContent.trim())) {
+                        node.classList.add('en-link');
+                    }
+                } else {
+                    Array.from(node.childNodes).forEach(processNode);
+                }
+            }
+        }
+
+        processNode(content);
+    });
+</script>
+
 
     </main>
 </body>

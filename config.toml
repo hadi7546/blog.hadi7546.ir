@@ -5,7 +5,7 @@ languageCode = "fa-ir"
 languageDirection = "rtl"
 paginate = 10
 theme = "m10c"
-title = "Hadi7546's Blog"
+title = "hadi's blog"
 
 [menu]
 [[menu.main]]
@@ -25,7 +25,7 @@ weight = 2
 icon = "rss"
 
 [params]
-Description = "بلاگِ هادی."
+Description = "بلاگ هادی"
 EnableTwitterEmbed = false
 author = "Hadi Azarnasab"
 avatar = "avatar.png"

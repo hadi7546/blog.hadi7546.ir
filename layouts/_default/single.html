@@ -1,5 +1,33 @@
 {{ define "main" }}
 <style>
+    #post-content a.en-link {
+        direction: ltr;
+        display: inline-block;
+    }
+
+    .post-content a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        direction: ltr;
+    }
+
+    .post-content a:hover {
+        color: #004499;
+        text-decoration: underline;
+    }
+
+    .post-content a.highlight {
+        background-color: #fff3cd;
+        padding: 2px 4px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+    }
+
+    .post-content a.highlight:hover {
+        background-color: #ffe69c;
+    }
+
     .rtl {
         direction: rtl;
         text-align: right;
@@ -165,4 +193,33 @@
         setDirection(content);
     });
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const content = document.getElementById('post-content');
+
+        function isEnglish(text) {
+            return /^[A-Za-z0-9\s\W]*$/.test(text);
+        }
+
+        function processNode(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const span = document.createElement('span');
+                span.textContent = node.textContent;
+                node.parentNode.replaceChild(span, node);
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                if (node.tagName === 'A') {
+                    if (isEnglish(node.textContent.trim())) {
+                        node.classList.add('en-link');
+                    }
+                } else {
+                    Array.from(node.childNodes).forEach(processNode);
+                }
+            }
+        }
+
+        processNode(content);
+    });
+</script>
+
 {{ end }}

@@ -39,5 +39,6 @@ cover: "/images/covers/02.jpg"
 در نهایت راست کارآگاهی ماهر، همکاری محترم، آدمی سرشار از تفکرات زیبا و درنهایت دوستی بود که هرچند مجبور به کارهایی ناشایست شد ولی باز هم قابل احترام بود. راست حداقل برای من شخصیه که دوست دارم بتونم شبیه‌اش صحبت کنم حداقل. امسال ۱۰ ساله که از انتشار اولین اپیزود فصل اول این سریال می‌گذره. دوست داشتید چندتا لینک می‌ذارم که می‌تونید دیدگاه‌های بقیه رو هم درموردش ‌بخونید.
 
 [True Detective and the Challenge of Nihilism](https://beiner.substack.com/p/true-detective-and-the-challenge)
+
 [Ask a Philosopher: What’s Up With True Detective’s Rust Cohle?](https://www.vulture.com/2014/02/philosopher-assesses-true-detective-characters-rust-cohle-marty-hart.html)
 

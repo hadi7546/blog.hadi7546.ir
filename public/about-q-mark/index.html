@@ -25,7 +25,7 @@
   <meta name="twitter:description" content=" اندکی حرف درمورد علامت سوال بعد از اسم من.">
 
     <meta property="og:url" content="http://localhost:1313/about-q-mark/">
-  <meta property="og:site_name" content="Hadi7546&#39;s Blog">
+  <meta property="og:site_name" content="hadi&#39;s blog">
   <meta property="og:title" content="درباره علامت سوال.">
   <meta property="og:description" content=" اندکی حرف درمورد علامت سوال بعد از اسم من.">
   <meta property="og:locale" content="fa_ir">
@@ -42,7 +42,7 @@
 <body>
     <header class="app-header">
         <a href="http://localhost:1313/"><img class="app-header-avatar" src="/avatar.png" alt="Hadi Azarnasab" /></a>
-        <span class="app-header-title">Hadi7546&#39;s Blog</span>
+        <span class="app-header-title">hadi&#39;s blog</span>
         <nav class="app-header-menu">
             <a class="app-header-menu-item" href="/tags/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
   <title>برچسب ها</title>
@@ -55,7 +55,7 @@
   <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
 </svg> فید RSS</a>
         </nav>
-        <p>بلاگِ هادی.</p>
+        <p>بلاگ هادی</p>
         <div class="app-header-social">
             
             <a href="https://hadi7546.ir" target="_blank" rel="noreferrer noopener me">
@@ -98,6 +98,28 @@
     <main class="app-container">
         
 <style>
+    .post-content a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .post-content a:hover {
+        color: #004499;
+        text-decoration: underline;
+    }
+
+    .post-content a.highlight {
+        background-color: #fff3cd;
+        padding: 2px 4px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+    }
+
+    .post-content a.highlight:hover {
+        background-color: #ffe69c;
+    }
+
     .rtl {
         direction: rtl;
         text-align: right;
@@ -108,9 +130,9 @@
         text-align: left;
     }
 
-    .auto {
-        direction: auto;
-        unicode-bidi: embed;
+    .mixed {
+        direction: rtl;
+        text-align: justify;
     }
 
     blockquote.rtl {
@@ -172,7 +194,7 @@
             </div>
         </div>
     </header>
-    <div class="post-content" id="post-content" dir="auto">
+    <div class="post-content" id="post-content">
         <p>برای شما هم پیش اومده که بخواید بدونید قراره چی کار کنید؟ یه چیکار کنید واقعی. قاعدتا همه ما دوست داریم این رو بدونیم. منتها بعضی مواقع جواب دادن به این سوال خیلی سخته. زیادی سخته و نمی‌شه به سادگی هم بیخیال‌اش شد. مشکل من ولی فراتر از جواب دادن به این سوال بود. مشکل من اون نهایت و پایان‌شه. تهِ تهش قراره بمیریم و به نیستی سپرده بشیم. یه نیستی واقعی! البته واقعی بودن نیستی یه پارادوکسه و ما نمی‌تونیم بگیم نیستی یک واقعیته. نیستی نیستیه. حتی صحبت کردن درموردش هم پارادوکسه. دردناکه نه؟</p>
 
     </div>
@@ -200,7 +222,22 @@
             }
 
             if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
-                element.className = isRTL(element.textContent) ? 'rtl' : 'ltr';
+                let text = element.textContent.trim();
+                if (text) {
+                    let words = text.split(/\s+/);
+                    let rtlCount = 0;
+                    let ltrCount = 0;
+                    words.forEach(word => {
+                        if (isRTL(word)) rtlCount++;
+                        else ltrCount++;
+                    });
+
+                    if (rtlCount > 0 && ltrCount > 0) {
+                        element.className = 'mixed';
+                    } else {
+                        element.className = rtlCount > ltrCount ? 'rtl' : 'ltr';
+                    }
+                }
             } else {
                 Array.from(element.childNodes).forEach(child => {
                     if (child.nodeType === Node.ELEMENT_NODE) {
@@ -208,7 +245,7 @@
                     } else if (child.nodeType === Node.TEXT_NODE && child.textContent.trim()) {
                         let span = document.createElement('span');
                         span.textContent = child.textContent;
-                        span.className = isRTL(child.textContent) ? 'rtl' : 'ltr';
+                        setDirection(span);
                         child.parentNode.replaceChild(span, child);
                     }
                 });
@@ -216,6 +253,7 @@
         }
 
         const content = document.getElementById('post-content');
+        content.style.unicodeBidi = "plaintext";
         setDirection(content);
     });
 </script>
