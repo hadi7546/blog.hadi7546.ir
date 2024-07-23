@@ -1,7 +1,7 @@
 ---
 published: true
 title: چرا Rust Cohle رو دوست دارم؟
-Description: ".در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective"
+Description: "در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective."
 layout: post
 tags: ["tv-series", "rust-cohle"]
 date: 2024-07-22T23:30:00+00:00
