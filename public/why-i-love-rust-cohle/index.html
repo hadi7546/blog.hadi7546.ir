@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fa-ir">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>چرا Rust Cohle رو دوست دارم؟</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com https://public.slidesharecdn.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; form-action 'self' https://syndication.twitter.com/ https://platform.twitter.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; frame-src 'self' www.youtube.com www.youtube-nocookie.com https://platform.twitter.com https://syndication.twitter.com https://jsfiddle.net fiddle.jshell.net *.jsfiddle.net disqus.com disquscdn.com *.disqus.com *.disquscdn.com *.graphcomment.com graphcomment.com; img-src 'self' https://www.google-analytics.com https://platform.twitter.com *.twimg.com https://syndication.twitter.com data: https://files.kuula.io disqus.com disquscdn.com *.disqus.com *.disquscdn.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://use.fontawesome.com https://fonts.googleapis.com https://www.google.com https://platform.twitter.com *.twimg.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com; script-src 'self' 'unsafe-inline' https://platform.twitter.com https://cdn.syndication.twimg.com *.amazon-adsystem.com https://www.google-analytics.com disqus.com disquscdn.com *.disqus.com *.disquscdn.com *.graphcomment.com; connect-src 'self' disqus.com disquscdn.com *.disqus.com *.disquscdn.com *.graphcomment.com graphcomment.com">
+    <link rel="canonical" href="http://localhost:1313/why-i-love-rust-cohle/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="generator" content="Hugo 0.129.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Hadi Azarnasab" />
+    <meta name="description" content="در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective" />
+    <meta name="og:image" content="/images/covers/02.jpg" />
+    <link rel="stylesheet" href="/css/main.min.41cdb7e969c723bd1b1a2a9a799bf9c87ddfbe4907d61d271037ee0b7ca9b9a9.css" />
+
+    
+  
+
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="چرا Rust Cohle رو دوست دارم؟">
+  <meta name="twitter:description" content="در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective">
+
+    <meta property="og:url" content="http://localhost:1313/why-i-love-rust-cohle/">
+  <meta property="og:site_name" content="Hadi7546&#39;s Blog">
+  <meta property="og:title" content="چرا Rust Cohle رو دوست دارم؟">
+  <meta property="og:description" content="در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective">
+  <meta property="og:locale" content="fa_ir">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-22T23:30:00+00:00">
+    <meta property="article:modified_time" content="2024-07-22T23:30:00+00:00">
+    <meta property="article:tag" content="Tv-Series">
+    <meta property="article:tag" content="Rust-Cohle">
+
+
+</head>
+
+<body>
+    <header class="app-header">
+        <a href="http://localhost:1313/"><img class="app-header-avatar" src="/avatar.png" alt="Hadi Azarnasab" /></a>
+        <span class="app-header-title">Hadi7546&#39;s Blog</span>
+        <nav class="app-header-menu">
+            <a class="app-header-menu-item" href="/tags/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>برچسب ها</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg> برچسب ها</a>
+             | 
+            
+            <a class="app-header-menu-item" href="/index.xml"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-rss">
+  <title>فید RSS</title>
+  <path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle>
+</svg> فید RSS</a>
+        </nav>
+        <p>بلاگِ هادی.</p>
+        <div class="app-header-social">
+            
+            <a href="https://hadi7546.ir" target="_blank" rel="noreferrer noopener me">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-globe">
+  <title>website</title>
+  <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+            </a>
+            
+            <a href="https://hadi7546.ir/social/twitter" target="_blank" rel="noreferrer noopener me">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+            </a>
+            
+            <a href="https://hadi7546.ir/social/github" target="_blank" rel="noreferrer noopener me">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+            </a>
+            
+            <a href="https://hadi7546.ir/social/telegram" target="_blank" rel="noreferrer noopener me">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-telegram">
+  <title>telegram</title>
+  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
+            </a>
+            
+            <a href="mailto:hi@hadi7546.ir" target="_blank" rel="noreferrer noopener me">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-email">
+  <title>email</title>
+  <polyline points="22,6 12,13 2,6"></polyline><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+</svg>
+            </a>
+            
+        </div>
+    </header>
+    <main class="app-container">
+        
+<style>
+    .rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .ltr {
+        direction: ltr;
+        text-align: left;
+    }
+
+    blockquote.rtl {
+        border-right: 5px solid #ccc;
+        border-left: none;
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    blockquote.ltr {
+        border-left: 5px solid #ccc;
+        border-right: none;
+        padding-left: 15px;
+        padding-right: 0;
+    }
+
+    .post-cover {
+        margin-bottom: 20px;
+    }
+
+    .cover-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+</style>
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">چرا Rust Cohle رو دوست دارم؟</h1>
+        
+        <div class="post-cover">
+            <img src="/images/covers/02.jpg" alt="چرا Rust Cohle رو دوست دارم؟" class="cover-image">
+        </div>
+        
+        <div class="post-meta">
+            <div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>تاریخ انتشار</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg> 1403/5/1
+            </div>
+            <div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>زمان تقریبی مطالعه</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+                5 دقیقه
+            </div>
+            <div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-message-square">
+  <title>دیدگاه ها</title>
+  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+</svg>
+                <span class="gc-counter" data-uid="8b9c415adc606338e5939e5cce9c09ca">0</span>&nbsp; <a href="#comments"> دیدگاه </a>
+            </div>
+            <div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>برچسب ها</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+                <a class="tag" href="http://localhost:1313/tags/tv-series/">Tv-Series</a>
+                <a class="tag" href="http://localhost:1313/tags/rust-cohle/">Rust-Cohle</a>
+            </div>
+        </div>
+    </header>
+    <div class="post-content" id="post-content">
+        <p>چرا اینقدر از Rust Cohle (<a href="https://true-detective.fandom.com/wiki/Rustin_Cohle">https://true-detective.fandom.com/wiki/Rustin_Cohle</a>) خوشم میاد؟  اسپویل از فصل اول True Detective
+فکر کنم دو سال پیش بود که یه اتفاقی باعث تغییرات زیادی در تفکرات و عقایدم شد. معلم علومی داشتم که آدم علم‌محور و خفنی بود و حرفاش باعث شد خیلی تو فکر فرو برم. دو سه ماه بعد از این اتفاق که ذهنتیم رو به کل عوض کرد، توی تلگرام یه ویدیو دیدم از اون سکانس معروف (<a href="https://t.me/c/hadi_7546/1973">https://t.me/c/hadi_7546/1973</a>) فصل اول True Detective که راست کوهل می‌گه:
+I think human conscience&hellip; (<a href="https://t.me/hadi_7546/1975">https://t.me/hadi_7546/1975</a>)
+توی اون برهه زمانی که اوج برانگیختگی(!) علمی و شایدم کمی فلسفی‌ام بود و عملاً دوست داشتم درمورد هرچیزی که می‌بینم و می‌شنوم به
+عمیق‌ترین و بنیادی‌ترین شکل ممکن نگاه کنم، فکر کنم و نظر بدم، نظرم جلب شد که شاید این یه سکانس از فیلم یا سریال باشه. سریال رو شروع کردم و آره، شد یکی از بهترین سریال‌های عمرم. محشر بود. اکت‌ها، پلان‌ها، سکانس‌ها، محیط و حتی رنگ و هوایی که توی فصل اول کارآگاه حقیقی هست من رو به وجد آورد. پس یکی از دلایل اصلی‌ای که به راست کوهل علاقه زیادی دارم، همینه. یاد یه دورانی میوفتم که این سریال هم کمک زیادی بهم کرد. راست شخصیت بسیار عجیب، جالب و قشنگی داره. بازیگری متیو مک‌کانهی شما رو به آسونی وادار می‌کنه تا آخرین قسمت رو یه سره ببینید. راست توی همین سکانس معروف می‌گه: من خودم رو یک &ldquo;واقع‌گرا&rdquo; می‌دونم ولی توی دیدگاه‌های فلسفی به ما می‌گن &ldquo;بدبین&rdquo;. مارتی می‌گه خب این یعنی چی حالا؟ می‌گه: یعنی تو پارتی‌ها آدم بدی‌ام. مارتی می‌گه والا بیرونشم همچین خوب نیستی =)
+این روزا زیاد درمورد این سریال نقد و ویدیو می‌خونم و می‌بینیم. فن‌های سریال راست رو impassioned nihilist-نهیلیست پرشور و anti-natalist-تولدستیزی می‌دونن. پوچ‌گرای پرشور! مطمئن نیستم ولی بنظر یا همون absurdism یا existential nihilism-نهیلیسم اگزیستانسیال. یعنی اینکه اوکی،‌ زندگی پوچه و کاری از دست ما برنمیاد، زندگی رو معنادار نمی‌کنیم بلکه با پوچی زندگی روبه‌رو می‌شیم. کل سریال سراسر حرف‌های قشنگ از کوهله. راست می‌گه:</p>
+<blockquote>
+<p><em>Why should I live in history, huh? Fuck, I don&rsquo;t wanna know anything, anymore.</em></p>
+</blockquote>
+<p>راست بسیار زیبا پوچی زندگی رو به چشم‌مون میاره و در یکی از سکانس‌ها که دارن ازش بازجویی می‌کنن می‌گه:</p>
+<blockquote>
+<p><em>To realize that in all your life you know, all your love, all your hate, all your memories, all your pain — it was all the same thing. It was all the same dream, a dream that you had inside room, a dream about being a person.</em></p>
+</blockquote>
+<p>رویای اینکه ما کسی هستیم. بله، تکامل پیدا کردیم، زنده موندیم و درحال حاضر پیشرفته‌ترین گونه‌ای هستیم که در زمین زندگی می‌کنه. ولی به چه هدفی؟ درنهایت با پوچی عظیمی روبه‌رو خواهیم شد. خودمون رو بکشیم؟</p>
+<blockquote>
+<p><em>I tell myself I bear witness, but the real answer is that it&rsquo;s obviously my programming. And I lack the constitution for suicide.</em></p>
+</blockquote>
+<p>طبیعت ما برای بقا و زندگی تکامل پیدا کرده و کشتن خودمون چیزی غیر از اون چیزیه که براش زنده هستیم. یا مثلا راست می‌گفت که time is a flat-circle. خیلی از آدم‌ها فکر می‌کنن زمان چیز واقعی‌‌ای نیست. مفهوم انتزاعی‌ای هست مثل خیلی از چیزای دیگه که ما برای خودمون ساختیم. مثل دین. مثل یک ابرقدرت کنترل‌کننده انسان‌گونه. ولی خب علمی همچین چیزی درست نیست. بسیاری از مفاهیم فیزیکی که داریم با زمان درآمیخته شدن حتی انیشتین اومد گفت که اصلا فضا و زمان با هم آمیخته شدن و مفهوم و مدل ریاضیاتی‌ای به اسم space-time رو بنا داد.</p>
+<p>راست آدم بسیار شریفی توی سریال نشون داده می‌شه. بسیار شریف و حساس درباره پرونده‌ای که واسش تحقیق می‌کنه. بیش از ۲۰سال برای پرونده‌اش تلاش کرد و حلش کرد. با تمام مشکلاتی که جلوی روش اومد. بازجوی خوبی هم بود و به‌راحتی متهم رو تشخیص می‌داد. راست در سکانس دیگه می‌گه که:</p>
+<blockquote>
+<p><em>Life&rsquo;s barely long enough to get good at one thing. So be careful what you get good at.</em></p>
+</blockquote>
+<p>نقل‌قولی ترسناک، خشن و البته تلنگرآمیز. زندگی اونقدر کافی هست که توی یه چیزی هم که شده خوب باشی، حواست باشه اون چیه. من به شخصه هنوز اون یه چیز رو پیدا نکردم. حتی ممکنه اینطور هم ببینیم که زندگی اونقدر کافی هست که با یکی هم که شده خوب باشیم، حواسمون باشه اون کیه.
+خود راست جای دیگه باز می‌گه:</p>
+<blockquote>
+<p><em>I know who I am. And after all these years, there&rsquo;s a victory in that.</em></p>
+</blockquote>
+<p>برعکس من که نمی‌دونم کی هستم هنوز و قراره کی باشم. سخته نه؟‌ کوهل به قشنگی می‌فهمید که کی هست و هدف از زندگی کردنش درعین دونستن پوچیش چیه. یا حتی اینکه راست چطور درمورد مرگ دخترش فکر می‌کرد. دیدگاه‌های خیلی جالبی توی سریال بیان می‌کنه. به شخصه این تقلیل از مرگ رو بسیار دوست دارم.</p>
+<blockquote>
+<p><em>Somewhere in that darkness, she slipped into another, deeper kind.</em></p>
+</blockquote>
+<p>راست مردم مذهبی‌ای که تنها سد دفاعی‌ای که دارن ترس از عذاب الهی یا تنها فکری که درمورد کار خوب دارن پاداش الهی هست رو سرزنش می‌کرد. درست هم هست. چه بسیار آدم‌های غرق در مذهب کورشده‌ای می‌بینیم که فکر می‌کنن بهترین و برگزیده‌ان. فکر می‌کنن که خدا مستقیما راه مستقیم رو به بهشت و پاداش رو بهشون گفته. فکر می‌کنن که خدا فقط اون‌ها رو دوست داره و توی بهشتش فقط برای اون‌ها جایی گذاشته.</p>
+<blockquote>
+<p><em>If the only thing keeping a person decent is the expectation of divine reward, then, brother, that person is a piece of shit - and I&rsquo;d like to get as many of them out in the open as possible.</em></p>
+</blockquote>
+<p>در نهایت راست کارآگاهی ماهر، همکاری محترم، آدمی سرشار از تفکرات زیبا و درنهایت دوستی بود که هرچند مجبور به کارهایی ناشایست شد ولی باز هم قابل احترام بود. راست حداقل برای من شخصیه که دوست دارم بتونم شبیه‌اش صحبت کنم حداقل. امسال ۱۰ ساله که از انتشار اولین اپیزود فصل اول این سریال می‌گذره. دوست داشتید چندتا لینک می‌ذارم که می‌تونید دیدگاه‌های بقیه رو هم درموردش ‌بخونید.</p>
+<p>True Detective and the Challenge of Nihilism (<a href="https://beiner.substack.com/p/true-detective-and-the-challenge">https://beiner.substack.com/p/true-detective-and-the-challenge</a>)
+Ask a Philosopher: What’s Up With True Detective’s Rust Cohle? (<a href="https://www.vulture.com/2014/02/philosopher-assesses-true-detective-characters-rust-cohle-marty-hart.html">https://www.vulture.com/2014/02/philosopher-assesses-true-detective-characters-rust-cohle-marty-hart.html</a>)</p>
+
+    </div>
+    <div class="post-footer">
+        
+        
+        
+
+    </div>
+</article>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function isRTL(text) {
+            const rtlChars = /[\u0591-\u07FF\uFB1D-\uFDFD\uFE70-\uFEFC]/;
+            const ltrChars = /[A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02B8]/;
+            let rtlCount = (text.match(rtlChars) || []).length;
+            let ltrCount = (text.match(ltrChars) || []).length;
+            return rtlCount > ltrCount;
+        }
+
+        function setDirection(element) {
+            if (element.tagName === 'BLOCKQUOTE') {
+                let direction = isRTL(element.textContent) ? 'rtl' : 'ltr';
+                element.className = element.className ? element.className + ' ' + direction : direction;
+            }
+
+            if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
+                element.className = isRTL(element.textContent) ? 'rtl' : 'ltr';
+            } else {
+                Array.from(element.childNodes).forEach(child => {
+                    if (child.nodeType === Node.ELEMENT_NODE) {
+                        setDirection(child);
+                    } else if (child.nodeType === Node.TEXT_NODE && child.textContent.trim()) {
+                        let span = document.createElement('span');
+                        span.textContent = child.textContent;
+                        span.className = isRTL(child.textContent) ? 'rtl' : 'ltr';
+                        child.parentNode.replaceChild(span, child);
+                    }
+                });
+            }
+        }
+
+        const content = document.getElementById('post-content');
+        setDirection(content);
+    });
+</script>
+
+    </main>
+</body>
+
+</html>

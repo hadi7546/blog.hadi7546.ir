@@ -4,9 +4,9 @@ title: چرا Rust Cohle رو دوست دارم؟
 Description: "در مدح کارآگاه مورد علاقه‌ام، راست کوهل. کمی اسپویل از فصل اول True Detective"
 layout: post
 tags: ["tv-series", "rust-cohle"]
-date: 2024-07-23T23:30:00+00:00
+date: 2024-07-22T23:30:00+00:00
 url: /why-i-love-rust-cohle
-cover: "https://static.wikia.nocookie.net/true-detective/images/0/01/Rust_Cohle_2012.jpg"
+cover: "/images/covers/02.jpg"
 ---
 چرا اینقدر از Rust Cohle (https://true-detective.fandom.com/wiki/Rustin_Cohle) خوشم میاد؟  اسپویل از فصل اول True Detective 
 فکر کنم دو سال پیش بود که یه اتفاقی باعث تغییرات زیادی در تفکرات و عقایدم شد. معلم علومی داشتم که آدم علم‌محور و خفنی بود و حرفاش باعث شد خیلی تو فکر فرو برم. دو سه ماه بعد از این اتفاق که ذهنتیم رو به کل عوض کرد، توی تلگرام یه ویدیو دیدم از اون سکانس معروف (https://t.me/c/hadi_7546/1973) فصل اول True Detective که راست کوهل می‌گه: 
