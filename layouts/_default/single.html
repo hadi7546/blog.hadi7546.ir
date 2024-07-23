@@ -10,6 +10,11 @@
         text-align: left;
     }
 
+    .mixed {
+        direction: rtl;
+        text-align: justify;
+    }
+
     blockquote.rtl {
         border-right: 5px solid #ccc;
         border-left: none;
@@ -125,7 +130,22 @@
             }
 
             if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
-                element.className = isRTL(element.textContent) ? 'rtl' : 'ltr';
+                let text = element.textContent.trim();
+                if (text) {
+                    let words = text.split(/\s+/);
+                    let rtlCount = 0;
+                    let ltrCount = 0;
+                    words.forEach(word => {
+                        if (isRTL(word)) rtlCount++;
+                        else ltrCount++;
+                    });
+
+                    if (rtlCount > 0 && ltrCount > 0) {
+                        element.className = 'mixed';
+                    } else {
+                        element.className = rtlCount > ltrCount ? 'rtl' : 'ltr';
+                    }
+                }
             } else {
                 Array.from(element.childNodes).forEach(child => {
                     if (child.nodeType === Node.ELEMENT_NODE) {
@@ -133,7 +153,7 @@
                     } else if (child.nodeType === Node.TEXT_NODE && child.textContent.trim()) {
                         let span = document.createElement('span');
                         span.textContent = child.textContent;
-                        span.className = isRTL(child.textContent) ? 'rtl' : 'ltr';
+                        setDirection(span);
                         child.parentNode.replaceChild(span, child);
                     }
                 });
@@ -141,6 +161,7 @@
         }
 
         const content = document.getElementById('post-content');
+        content.style.unicodeBidi = "plaintext";
         setDirection(content);
     });
 </script>
