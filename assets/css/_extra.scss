@@ -166,3 +166,9 @@ pre {
     background-color: #b3b3b3;
     opacity: 0.8;
 }
+
+@media (max-width: 450px) {
+    .post-content {
+        font-size: 1em;
+    }
+}
